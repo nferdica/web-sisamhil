@@ -16,6 +16,7 @@
 }
 
 /*Configuração botões*/
+
 .btn-outline-primary {
     --bs-btn-color: var(--primary-color);
     --bs-btn-border-color: var(--primary-color);
@@ -64,8 +65,13 @@
     color: var(--primary-color);
 }
 
-/*Rodapé Cabeçalho*/
+/*Rodapé Cabeçalho*/ 
 
-#header {
-    border: 2px solid red;
+#header-footer {
+    background-color: var(--primary-color);
 }
+
+#header-footer p, i{
+    color: #fff;
+}
+

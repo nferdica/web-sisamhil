@@ -43,10 +43,6 @@
 
 /*Barra de navegação*/
 
-#navbar {
-    border: 2px solid red;
-}
-
 #navbar .navbar-brand {
     max-width: 400px;
 }
@@ -71,7 +67,55 @@
     background-color: var(--primary-color);
 }
 
+#header-footer i {
+    font-size: 40px;
+}
+
+#header-footer p{
+    font-size: 20px;
+}
+
 #header-footer p, i{
     color: #fff;
 }
+
+/*Primeiro e segundo container de informações (main)*/
+
+#primeiro-container img{
+    height: 80px;
+    width: auto;
+    background-color: #fff;
+}
+
+#segundo-container img {
+    height: 80px;
+    width: auto;
+}
+
+.cards {
+    border: none;
+}
+
+/*Produtos e serviços*/
+
+#produtos-servicos {
+    background-color: var(--primary-color);
+}
+
+#produtos-servicos i {
+    font-size: 80px;
+}
+
+#produtos-servicos p{
+    font-size: 15px;
+}
+
+#produtos-servicos p, i, h2, h3{
+    color: #fff;
+}
+
+
+    
+
+
 

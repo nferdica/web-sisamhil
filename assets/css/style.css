@@ -93,7 +93,16 @@
 }
 
 .cards {
+    color: var(--primary-color);
     border: none;
+}
+
+.cards h4 {
+    color: var(--primary-color);
+}
+
+.cards h5 {
+    color: var(--primary-color);
 }
 
 /*Produtos e serviços*/
@@ -113,6 +122,7 @@
 #produtos-servicos p, i, h2, h3{
     color: #fff;
 }
+
 
 
     

@@ -119,11 +119,6 @@
     background-color: #fff;
 }
 
-#secundary-container img {
-    height: 80px;
-    width: auto;
-}
-
 .cards {
     color: var(--primary-color);
     border: none;
@@ -153,6 +148,18 @@
 
 #products-services p, i, h2, h3{
     color: #fff;
+}
+
+/*Depoimentos*/
+
+#depositions i{
+    font-size: 80px;
+    color: var(--primary-color);
+    border-bottom: 5px solid var(--primary-color);
+}
+
+#depositions h2, h4, p{
+    color: var(--primary-color);
 }
 
 

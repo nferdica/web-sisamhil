@@ -34,6 +34,23 @@
     --bs-gradient: none;
 }
 
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--primary-color);
+    --bs-btn-border-color: var(--primary-color);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--primary-color);
+    --bs-btn-hover-border-color: var(--primary-color);
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--primary-color);
+    --bs-btn-active-border-color: var(--primary-color);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--primary-color);
+    --bs-btn-disabled-border-color: var(--primary-color);
+}
+
 .btn {
     border-radius: 25px;
     padding: 5px 25px 5px 25px;
@@ -79,15 +96,30 @@
     color: #fff;
 }
 
+/*Cabeçalho primeiro container*/
+
+#header-primary-container {
+    color: var(--primary-color);
+}
+
+#header-primary-container i {
+    font-size: 80px;
+    color: var(--primary-color);
+}
+
+#header-primary-container h3 {
+    color: var(--primary-color);
+}
+
 /*Primeiro e segundo container de informações (main)*/
 
-#primeiro-container img{
+#primary-container img{
     height: 80px;
     width: auto;
     background-color: #fff;
 }
 
-#segundo-container img {
+#secundary-container img {
     height: 80px;
     width: auto;
 }
@@ -107,19 +139,19 @@
 
 /*Produtos e serviços*/
 
-#produtos-servicos {
+#products-services {
     background-color: var(--primary-color);
 }
 
-#produtos-servicos i {
+#products-services i {
     font-size: 80px;
 }
 
-#produtos-servicos p{
+#products-services p{
     font-size: 15px;
 }
 
-#produtos-servicos p, i, h2, h3{
+#products-services p, i, h2, h3{
     color: #fff;
 }
 

@@ -5,16 +5,510 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>SISAMHIL</title>
-	<description> Sistema de Informações e Assistência em Informática LTDA </description>
+	<link rel="shortcut icon" href="./public/assets/img/icon-sisamhil.png" type="image/x-icon">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
 		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
 		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./public/assets/css/style.css">
 </head>
 
-<body>
+<body
+	class="w-screen min-h-screen font-normal bg-background text-primary scroll-smooth font-quicksand antialiased overflow-x-hidden">
+	<header class="bg-background-foreground w-full h-full">
+		<div class="flex flex-row justify-between items-center py-4 container">
+			<!-- logo -->
+			<div class="md:basis-1/3 lg:basis-1/2">
+				<img class="h-auto w-2/3" src="./public/assets/img/logo-sisamhil.png" alt="logo">
+			</div>
+			<!-- navegação - desktop -->
+			<nav class="md:block md:basis-2/3 lg:basis-1/2 hidden">
+				<ul class="flex flex-row gap-12 items-center justify-end w-full">
+					<li><a href="#" class="font-bold text-md hover:underline animation">Webmail</a></li>
+					<li><a href="#" class="font-bold text-md hover:underline animation">Notícias</a></li>
+					<li>
+						<a href="#"
+							class="hover:bg-background-foreground hover:text-primary animation text-xl bg-primary py-3 px-8 rounded-full text-background-foreground relative z-30 before:absolute before:inset-0 before:border-2 before:border-primary before:rounded-full before:z-20 after:absolute after:inset-0 after:border-4 after:border-background-foreground after:rounded-full after:z-10">Suporte</a>
+					</li>
+				</ul>
+			</nav>
+			<!-- menu mobile -->
+			<div class="md:hidden z-50">
+				<!-- Botão do hamburguer -->
+				<div class="flex justify-end p-4 w-full">
+					<button id="hamburgerBtn" class="block md:hidden focus:outline-none">
+						<svg id="openIcon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 fill-current text-gray-800"
+							viewBox="0 0 24 24">
+							<path fill-rule="evenodd" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+						</svg>
+						<svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" class="hidden h-8 w-8 fill-current text-gray-800"
+							viewBox="0 0 24 24">
+							<path fill-rule="evenodd"
+								d="M17.879 7.88l-5.656 5.656-5.656-5.656L5.624 9.293l5.656 5.656-5.656 5.656 1.415 1.415 5.656-5.656 5.656 5.656 1.415-1.415-5.656-5.656 5.656-5.656-1.415-1.415z" />
+						</svg>
+					</button>
+				</div>
+				<!-- Menu lateral -->
+				<nav id="menu"
+					class="bg-white h-full fixed top-0 left-0 w-2/3 shadow-md -translate-x-full transition-transform duration-300">
+					<ul class="p-4 space-y-8 text-center">
+						<li><a href="#" class="font-bold text-md hover:underline animation" href="#">Webmail</a></li>
+						<li><a href="#" class="font-bold text-md hover:underline animation">Notícias</a></li>
+						<li><a href="#"
+								class="hover:bg-background-foreground hover:text-primary animation text-xl bg-primary py-3 px-8 rounded-full text-background-foreground relative z-30 before:absolute before:inset-0 before:border-2 before:border-primary before:rounded-full before:z-20 after:absolute after:inset-0 after:border-4 after:border-background-foreground after:rounded-full after:z-10">Suporte</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<main class="w-full h-auto">
+		<section id="hero"
+			class="bg-background-foreground w-full relative lg:bg-hero lg:[background-position:160%] xl:[background-position:115%] bg-no-repeat bg-contain">
+			<div class="flex flex-row justify-between items-center container">
+				<div class="w-full pt-4 pb-24 md:pt-8 lg:pt-16">
+					<div class="w-full flex flex-col gap-8 ">
+						<h1 class="text-6xl font-bold">O que a <br><span
+								class="text-secondary font-black leading-none">SISAMHIL</span> pode
+							<br>fazer por você?
+						</h1>
+						<p class="text-lg text-justify lg:w-1/2">
+							A SISAMHIL, desde 1995, é especialista em otimizar a Gestão da Saúde Pública. Podemos revolucionar
+							processos
+							em Secretarias de Saúde e Unidades Hospitalares de Médio e Grande porte. Comprometemo-nos a trazer
+							eficiência e expertise para impulsionar um impacto positivo na Saúde Coletiva.
+						</p>
+						<p cass="text-lg lg:w-1/2">Seja nosso parceiro na busca pela excelência na saúde pública.</p>
+						<div>
+							<a href="#"
+								class="hover:bg-background-foreground hover:text-primary animation text-xl bg-primary py-3 px-16 rounded-full text-background-foreground relative z-30 before:absolute before:inset-0 before:border-2 before:border-primary before:rounded-full before:z-20 after:absolute after:inset-0 after:border-4 after:border-background-foreground after:rounded-full after:z-10 w-max">Fale
+								Conosco</a>
+						</div>
+					</div>
+				</div>
+				<div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[85%] container">
+					<div
+						class="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-primary rounded-2xl h-auto p-4 *:flex *:flex-wrap *:flex-row *:items-center *:justify-center *:w-full *:mx-auto *:gap-2 *:text-white *:text-xl">
+						<div>
+							<img class="size- relative p-2 border-2 border-white rounded-full"
+								src="./public/assets/img/hand-coins.svg" alt="hand-coins">
+							<p class="font-bold min-w-40 text-center lg:text-left">Baixo <br>investimento</p>
+						</div>
+						<div>
+							<img class="relative p-2 border-2 border-white rounded-full" src="
+							./public/assets/img/panels-top-left.svg" alt="panels-top-left">
+							<p class="font-bold min-w-40 text-center lg:text-left">Interface <br>facilitada</p>
+						</div>
+						<div>
+							<img class="relative p-2 border-2 border-white rounded-full" src="
+							./public/assets/img/sliders-horizontal.svg" alt="sliders-horizontal">
+							<p class="font-bold min-w-40 text-center lg:text-left">Gerenciamento <br>personalizado</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="about-1" class="w-full bg-background">
+			<div
+				class="container flex flex-col-reverse md:flex-row justify-between items-start mt-72 mb-24 sm:mt-44 lg:mt-32 gap-8 md:gap-12 lg:gap-18">
+				<div class="w-full md:w-2/3 space-y-8">
+					<div>
+						<div aria-type="select" aria-label="mus" class="space-y-8">
+							<div>
+								<h2 class="text-4xl font-medium">Solução para a <strong>Saúde Municipal</strong></h2>
+								<h3 class="text-2xl font-medium">A <span class="font-bold">evolução</span> que a <span
+										class="font-bold">saúde</span>
+									precisa!</h3>
+							</div>
+							<p class="text-xl font-medium">O sistema contempla desde o atendimento primário à gestão estratégica da
+								Saúde.
+								Garantindo assim, a qualidade na assistência ao cidadão, o controle e a redução de custos para a gestão
+								e
+								a
+								efetividade às exigências Ministeriais.</p>
+						</div>
+						<div aria-type="select" aria-label="hosp" class="space-y-8 hidden">
+							<div>
+								<h2 class="text-4xl font-medium">HOSP</h2>
+								<h3 class="text-2xl font-medium">HOSP</h3>
+							</div>
+							<p class="text-xl font-medium">O sistema contempla desde o atendimento primário à gestão estratégica da
+								Saúde.
+								Garantindo assim, a qualidade na assistência ao cidadão, o controle e a redução de custos para a gestão
+								e
+								a
+								efetividade às exigências Ministeriais.</p>
+						</div>
+						<div aria-type="select" aria-label="vis" class="space-y-8 hidden">
+							<div>
+								<h2 class="text-4xl font-medium">Solução para a <strong>Saúde Municipal</strong></h2>
+								<h3 class="text-2xl font-medium">A <span class="font-bold">evolução</span> que a <span
+										class="font-bold">saúde</span>
+									precisa!</h3>
+							</div>
+							<p class="text-xl font-medium">O sistema contempla desde o atendimento primário à gestão estratégica da
+								Saúde.
+								Garantindo assim, a qualidade na assistência ao cidadão, o controle e a redução de custos para a gestão
+								e
+								a
+								efetividade às exigências Ministeriais.</p>
+						</div>
+						<div aria-type="select" aria-label="mas" class="space-y-8 hidden">
+							<div>
+								<h2 class="text-4xl font-medium">Solução para a <strong>Saúde Municipal</strong></h2>
+								<h3 class="text-2xl font-medium">A <span class="font-bold">evolução</span> que a <span
+										class="font-bold">saúde</span>
+									precisa!</h3>
+							</div>
+							<p class="text-xl font-medium">O sistema contempla desde o atendimento primário à gestão estratégica da
+								Saúde.
+								Garantindo assim, a qualidade na assistência ao cidadão, o controle e a redução de custos para a gestão
+								e
+								a
+								efetividade às exigências Ministeriais.</p>
+						</div>
+						<div aria-type="select" aria-label="cis" class="space-y-8 hidden">
+							<div>
+								<h2 class="text-4xl font-medium">Solução para a <strong>Saúde Municipal</strong></h2>
+								<h3 class="text-2xl font-medium">A <span class="font-bold">evolução</span> que a <span
+										class="font-bold">saúde</span>
+									precisa!</h3>
+							</div>
+							<p class="text-xl font-medium">O sistema contempla desde o atendimento primário à gestão estratégica da
+								Saúde.
+								Garantindo assim, a qualidade na assistência ao cidadão, o controle e a redução de custos para a gestão
+								e
+								a
+								efetividade às exigências Ministeriais.</p>
+						</div>
+						<div aria-type="select" aria-label="upa" class="space-y-8 hidden">
+							<div>
+								<h2 class="text-4xl font-medium">Solução para a <strong>Saúde Municipal</strong></h2>
+								<h3 class="text-2xl font-medium">A <span class="font-bold">evolução</span> que a <span
+										class="font-bold">saúde</span>
+									precisa!</h3>
+							</div>
+							<p class="text-xl font-medium">O sistema contempla desde o atendimento primário à gestão estratégica da
+								Saúde.
+								Garantindo assim, a qualidade na assistência ao cidadão, o controle e a redução de custos para a gestão
+								e
+								a
+								efetividade às exigências Ministeriais.</p>
+						</div>
+						<div class="mt-8">
+							<a href="#"
+								class="hover:bg-background-foreground hover:text-primary animation text-xl bg-primary py-3 px-8 md:px-16 rounded-full text-background-foreground relative z-30 before:absolute before:inset-0 before:border-2 before:border-primary before:rounded-full before:z-20 after:absolute after:inset-0 after:border-4 after:border-background-foreground after:rounded-full after:z-10 w-max">
+								Solicitar demonstração</a>
+						</div>
+					</div>
+				</div>
+				<div class="max-md:overflow-x-scroll max-md:py-4 w-full md:w-1/3">
+					<div class="flex flex-row md:flex-col gap-8 *:cursor-pointer *:animation">
+						<img class="h-auto w-36 hover:grayscale-0 hover:opacity-100 hover:scale-105" aria-label="mus" aria-role="button"
+							src="./public/assets/img/g-mus_logo_c.png" alt="g-mus">
+						<img class="h-auto w-[170px] grayscale opacity-50 hover:grayscale-0 hover:opacity-100 hover:scale-105" aria-label="hosp" aria-role="button"
+							src="./public/assets/img/g-hosp_logo_c.png" alt="g-hosp">
+						<img class="h-auto w-[125px] grayscale opacity-50 hover:grayscale-0 hover:opacity-100 hover:scale-105" aria-label="vis" aria-role="button"
+							src="./public/assets/img/g-vis_logo_c.png" alt="g-vis">
+						<img class="h-auto w-36 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 hover:scale-105" aria-label="mas" aria-role="button"
+							src="./public/assets/img/g-mas_logo_c.png" alt="g-mas">
+						<img class="h-auto w-36 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 hover:scale-105" aria-label="cis" aria-role="button"
+							src="./public/assets/img/g-cis_logo_c.png" alt="g-cis">
+						<img class="h-auto w-[160px] grayscale opacity-50 hover:grayscale-0 hover:opacity-100 hover:scale-105" aria-label="upa" aria-role="button"
+							src="./public/assets/img/g-upa_logo_c.png" alt="g-upa">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="about-2" class="w-full bg-primary">
+			<div class="container flex flex-col items-center justify-start gap-8 md:gap-12 lg:gap-18 py-8">
+				<h2
+					class="w-full text-center font-semibold text-background text-4xl uppercase relative after:absolute after:-bottom-4 after:left-1/2 after:-translate-x-1/2 after:h-1 after:w-1/5 after:bg-background">
+					excelência em <br>produtos e serviços
+				</h2>
+				<div
+					class="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-8 *:flex *:flex-col *:items-center *:justify-start *:gap-4">
+					<div>
+						<img class="size-24" src="./public/assets/img/headset.svg" alt="headset">
+						<p class="text-center capitalize text-2xl font-black text-background">suporte especializado</p>
+						<p class="text-center text-md font-medium text-background">Contamos com analistas especializados em Gestão
+							Pública, com mais
+							de 20 anos de experiência. Preparados
+							para te oferecer o melhor atendimento</p>
+					</div>
+					<div>
+						<img class="size-24" src="./public/assets/img/calendar-clock.svg" alt="calendar-clock">
+						<p class="text-center capitalize text-2xl font-black text-background">implantação</p>
+						<p class="text-center text-md font-medium text-background">Somos reconhecidos pelos prazos recordes em
+							implantação dos
+							sistemas. Prezamos em oferecer a melhor
+							experiência de migração para o seu setor, sem impactos ao contribuinte.</p>
+					</div>
+					<div>
+						<img class="size-24" src="./public/assets/img/messages-square.svg" alt="messages-square">
+						<p class="text-center capitalize text-2xl font-black text-background">atendimento</p>
+						<p class="text-center text-md font-medium text-background">Proporcionamos contato por diversos canais de
+							comunicação. A
+							nossa plataforma de atendimento é uma das
+							mais eficientes do mercado.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="about-3" class="w-full bg-background">
+			<div class="container flex flex-col sm:flex-row items-start justify-start gap-8 md:gap-12 pt-24 pb-16">
+				<div class="w-full lg:w-1/3 flex items-center justify-center lg:justify-end">
+					<div class="w-max space-y-3">
+						<div class="flex items-start justify-end gap-2">
+							<img class="size-16 rotate-180 -translate-y-1/2" src="./public/assets/img/quote.svg" alt="quote">
+							<img class="size-16" src="./public/assets/img/quote.svg" alt="quote">
+						</div>
+						<div class="w-full h-0.5 bg-primary"></div>
+						<div class="text-right text-4xl font-extrabold">Escute quem <br>já conhece</div>
+					</div>
+				</div>
+				<div class="w-11/12 lg:w-2/3 relative">
+					<div id="carousel" class="relative w-11/12 mx-auto px-4">
+						<!-- Botão para voltar -->
+						<button id="prevBtn"
+							class="absolute top-1/2 left-0 -translate-x-full -translate-y-1/2 bg-transparent p-2 rounded-full shadow-md z-10 focus:outline-none">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-primary" viewBox="0 0 24 24">
+								<path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+							</svg>
+						</button>
 
+						<!-- Botão para avançar -->
+						<button id="nextBtn"
+							class="absolute top-1/2 right-0 translate-x-full -translate-y-1/2 bg-transparent p-2 rounded-full shadow-md z-10 focus:outline-none">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-primary" viewBox="0 0 24 24">
+								<path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+							</svg>
+						</button>
+
+						<div class="flex flex-col gap-8 animation">
+							<div class="flex flex-col gap-4">
+								<p class="text-justify text-lg font-medium">A SISAMHIL é uma empresa que preza pela qualidade e
+									eficiência. O
+									suporte é um dos melhores que já tive a oportunidade de trabalhar. A equipe é muito
+									prestativa e
+									competente. A implantação do sistema foi muito rápida e sem impactos para a população.</p>
+								<p class="text-right
+									text-lg font-bold">- João da Silva, Secretário de Saúde de São Paulo</p>
+							</div>
+						</div>
+						<div class="flex-col gap-8 animation hidden">
+							<div class="flex flex-col gap-4">
+								<p class="text-justify text-lg font-medium">2 A SISAMHIL é uma empresa que preza pela qualidade e
+									eficiência. O
+									suporte é um dos melhores que já tive a oportunidade de trabalhar. A equipe é muito
+									prestativa e
+									competente. A implantação do sistema foi muito rápida e sem impactos para a população.</p>
+								<p class="text-right
+									text-lg font-bold">- João da Silva, Secretário de Saúde de São Paulo</p>
+							</div>
+						</div>
+						<div class="flex-col gap-8 animation hidden">
+							<div class="flex flex-col gap-4">
+								<p class="text-justify text-lg font-medium">3 A SISAMHIL é uma empresa que preza pela qualidade e
+									eficiência. O
+									suporte é um dos melhores que já tive a oportunidade de trabalhar. A equipe é muito
+									prestativa e
+									competente. A implantação do sistema foi muito rápida e sem impactos para a população.</p>
+								<p class="text-right
+									text-lg font-bold">- João da Silva, Secretário de Saúde de São Paulo</p>
+							</div>
+						</div>
+						<!-- <div class="flex flex-col gap-8">
+							<div>
+								<p class="text-left text-lg font-bold">João da Silva</p>
+								<p class="text-left text-lg font-semibold">Secretário de Saúde de São Paulo</p>
+							</div>
+							<div class="flex flex-col gap-4">
+								<p class="text-justify text-lg font-medium">A SISAMHIL é uma empresa que preza pela qualidade e
+									eficiência. O
+									suporte é um dos melhores que já tive a oportunidade de trabalhar. A equipe é muito
+									prestativa e
+									competente. A implantação do sistema foi muito rápida e sem impactos para a população.</p>
+							</div>
+						</div> -->
+					</div>
+				</div>
+		</section>
+		<section id="contact"
+			class="bg-background-foreground lg:bg-primary relative h-[1150px] lg:h-[700px] overflow-hidden py-16">
+			<div class="container flex flex-col items-center justify-start gap-8 md:gap-12 lg:gap-18">
+				<div
+					class="hidden lg:block absolute top-0 right-0 bg-background-foreground w-3/5 h-full bg-right bg-no-repeat bg-contain [background-image:_url('/public/assets/img/sisamhil-fundo.png')]">
+				</div>
+				<div
+					class="container flex flex-col max-lg:mt-[500px] lg:flex-row lg:absolute z-10 lg:top-1/2 -translate-y-1/2 gap-12">
+					<form class="h-full w-full lg:w-1/2 max-2xl bg-background rounded-3xl shadow-2xl px-4 py-6 space-y-4">
+						<h2 class="text-left text-2xl font-semibold text-primary">Entre em contato</h2>
+						<div
+							class="grid grid-cols-2 gap-3 *:w-full *:p-2 *:border *:border-gray-300 *:placeholder-gray-400 *:rounded-md">
+							<input class="col-span-2 md:col-span-1" type="text" name="nome" placeholder="Nome">
+							<input class="col-span-2 md:col-span-1" type="text" name="sobrenome" placeholder="Sobrenome">
+							<input class="col-span-2 md:col-span-1" type="tel" name="telefone" placeholder="Telefone">
+							<input class="col-span-2 md:col-span-1" type="email" name="email" placeholder="E-mail">
+							<input class="col-span-2 md:col-span-1" type="text" name="cidade" placeholder="Cidade">
+							<input class="col-span-2 md:col-span-1" type="text" name="estado" placeholder="Estado">
+							<textarea class="col-span-2" rows="8" name="assunto" placeholder="Assunto"></textarea>
+						</div>
+						<div class="w-full text-end">
+							<button type="submit"
+								class="hover:bg-background-foreground hover:text-primary animation text-md bg-primary py-1.5 px-12 rounded-full text-background-foreground relative z-30 before:absolute before:inset-0 before:border-2 before:border-primary before:rounded-full before:z-20 after:absolute after:inset-0 after:border-4 after:border-background-foreground after:rounded-full after:z-10 w-max">Enviar</button>
+						</div>
+					</form>
+					<div class="flex flex-col gap-20 w-full lg:w-1/2 mt-6">
+						<div>
+							<div class="flex flex-row items-center justify-start gap-2">
+								<img class="h-8 w-8 p-1 bg-primary rounded-full" src="./public/assets/img/map-pin.svg" alt="map-pin">
+								<p class="uppercase text-primary text-3xl font-bold">sisamhil sistemas</p>
+							</div>
+							<div class="space-y-1 text-gray-500 font-medium mt-2 ml-10">
+								<p>Avenida Getulio Vargas, 72 - SLJ - Sala 03</p>
+								<p>ZONA 01 - Maringá/PR</p>
+								<p>CEP: 87013-130</p>
+							</div>
+						</div>
+						<div>
+							<div class="flex flex-row items-center justify-start gap-2">
+								<img class="h-8 w-8 p-1 bg-primary rounded-full" src="./public/assets/img/phone.svg" alt="phone">
+								<p class="uppercase text-primary text-3xl font-bold">contatos</p>
+							</div>
+							<div class="grid grid-cols-2 gap-y-4 gap-x-2">
+								<div class="col-span-2 md:col-span-1 mt-4">
+									<a target="_blank"
+										class="group hover:cursor-pointer flex items-center justify-start gap-2 w-full hover:bg-background-foreground hover:text-primary animation text-md bg-primary py-2 px-4 rounded-full text-background-foreground relative z-30 before:absolute before:inset-0 before:border-2 before:border-primary before:rounded-full before:z-20 after:absolute after:inset-0 after:border-4 after:border-background-foreground after:rounded-full after:z-10">
+										<img class="group-hover:opacity-0" src="./public/assets/img/phone-outgoing.svg"
+											alt="phone-outgoing">
+										(44) 3226-6533
+									</a>
+								</div>
+								<div class="col-span-2 mt-1 md:col-span-1 md:mt-4">
+									<a href="wa.me/5544999999999" target="_blank"
+										class="group hover:cursor-pointer flex items-center justify-start gap-2 w-full hover:bg-background-foreground hover:text-primary animation text-md bg-primary py-2 px-4 rounded-full text-background-foreground relative z-30 before:absolute before:inset-0 before:border-2 before:border-primary before:rounded-full before:z-20 after:absolute after:inset-0 after:border-4 after:border-background-foreground after:rounded-full after:z-10">
+										<img class="group-hover:opacity-0" src="./public/assets/img/whatsapp.svg" alt="whatsapp.svg">
+										(44) 3226-6533
+									</a>
+								</div>
+								<div class="col-span-2 w-full">
+									<a href="mailto:atendimento@sisamhil.com.br" target="_blank"
+										class="group hover:cursor-pointer flex items-center justify-start gap-2 w-full hover:bg-background-foreground hover:text-primary animation text-md bg-primary py-2 px-4 rounded-full text-background-foreground relative z-30 before:absolute before:inset-0 before:border-2 before:border-primary before:rounded-full before:z-20 after:absolute after:inset-0 after:border-4 after:border-background-foreground after:rounded-full after:z-10">
+										<img class="group-hover:opacity-0" src="./public/assets/img/mail.svg"
+											alt="mail">atendimento@sisamhil.com.br</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</section>
+		<section id="location">
+			<div id="map" class="h-96 w-full">
+				<iframe class="h-full w-full"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4618.845204323825!2d-51.93614348568238!3d-23.422430382680254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ecd72b871e3b77%3A0xded0e8a8f4d138be!2sSISAMHIL!5e0!3m2!1spt-BR!2sbr!4v1708373212486!5m2!1spt-BR!2sbr"
+					style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</section>
+	</main>
+	<footer class="bg-primary">
+		<div class="container flex flex-col items-center justify-start gap-8 md:gap-12 lg:gap-18 py-8">
+			<h2
+				class="w-full text-center font-semibod text-background text-4xl uppercase relative after:absolute after:-bottom-4 after:left-1/2 after:-translate-x-1/2 after:h-1 after:w-1/5 after:bg-background">
+				nossos parceiros
+			</h2>
+			<div class="grid grid-cols-3 gap-8 *:w-56 *:h-auto mt-8">
+				<img src="./public/assets/img/inovadora.png" alt="logo-inovadora">
+				<img src="./public/assets/img/elotech.png" alt="logo-elotech">
+				<img src="./public/assets/img/grupo-g6.png" alt="logo-grupo-g6">
+			</div>
+		</div>
+
+	</footer>
+	<script>
+		function toggleMenu() {
+			const menu = document.getElementById('menu');
+			menu.classList.toggle('-translate-x-full');
+			toggleIcon();
+		}
+		function toggleIcon() {
+			const openIcon = document.getElementById('openIcon');
+			const closeIcon = document.getElementById('closeIcon');
+			openIcon.classList.toggle('hidden');
+			closeIcon.classList.toggle('hidden');
+		}
+		document.getElementById('hamburgerBtn').addEventListener('click', toggleMenu);
+	</script>
+	<script>
+		const divs = document.querySelectorAll('div[aria-type="select"]');
+		const images = document.querySelectorAll('img[aria-role="button"]');
+		images.forEach((image, index) => {
+			image.addEventListener('click', () => {
+				image.classList.remove('grayscale');
+				image.classList.remove('opacity-50');
+				images.forEach((img, i) => {
+					if (i !== index) {
+						img.classList.add('grayscale');
+						img.classList.add('opacity-50');
+					}
+				});
+				divs.forEach(div => div.classList.add('hidden'));
+				divs[index].classList.remove('hidden');
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const slides = document.querySelectorAll("#carousel > div");
+			let currentSlide = 0;
+
+			function showSlide(slideIndex) {
+				slides.forEach((slide, index) => {
+					if (index === slideIndex) {
+						slide.classList.remove("hidden");
+					} else {
+						slide.classList.add("hidden");
+					}
+				});
+			}
+			function nextSlide() {
+				currentSlide++;
+				if (currentSlide >= slides.length) {
+					currentSlide = 0;
+				}
+				showSlide(currentSlide);
+			}
+			function prevSlide() {
+				currentSlide--;
+				if (currentSlide < 0) {
+					currentSlide = slides.length - 1;
+				}
+				showSlide(currentSlide);
+			}
+			document.getElementById("nextBtn").addEventListener("click", () => {
+				nextSlide();
+				clearInterval(intervalId);
+			});
+			document.getElementById("prevBtn").addEventListener("click", () => {
+				prevSlide();
+				clearInterval(intervalId);
+			});
+			const intervalId = setInterval(nextSlide, 5000);
+		});
+	</script>
+	<script>
+		const form = document.querySelector('form');
+		form.addEventListener('submit', (e) => {
+			e.preventDefault();
+			const formData = new FormData(form);
+			const data = Object.fromEntries(formData);
+			console.log(data);
+		});
+	</script>
 </body>
 
 </html>

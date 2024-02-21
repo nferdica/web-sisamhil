@@ -22,11 +22,13 @@ module.exports = {
           DEFAULT: '1rem',
           sm: '2rem',
           lg: '4rem',
-          xl: '5rem',
-        }
+        },
       },
+      screens: {
+        '3xl': '1920px',
+      }
     },
-  },
-  plugins: [],
-}
+    plugins: [],
+  }
+};
 

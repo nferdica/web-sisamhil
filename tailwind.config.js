@@ -24,9 +24,6 @@ module.exports = {
           lg: '4rem',
         },
       },
-      screens: {
-        '3xl': '1920px',
-      }
     },
     plugins: [],
   }
